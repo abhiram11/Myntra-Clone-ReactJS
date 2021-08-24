@@ -1,15 +1,15 @@
 import React from "react";
-import { MensData } from "../../Data";
+import { WomensData } from "../../Data";
 import ProductCard from "../ProductCard";
-import { ProductsGrid } from "./MenElements";
+import { ProductsGrid } from "./WomenElements";
 
-const Men = () => {
-  const menData = MensData;
+const Women = () => {
+  const womenData = WomensData;
   return (
     <>
-      <h2>Men</h2>
+      <h2>Women</h2>
       <ProductsGrid>
-        {menData.map((product) => {
+        {womenData.map((product) => {
           return (
             <ProductCard
               imgUrl={product.imgUrl}
@@ -32,4 +32,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default Women;

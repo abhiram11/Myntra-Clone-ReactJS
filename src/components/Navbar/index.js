@@ -16,7 +16,10 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <NavbarLeft>
-        <h3>Myntra Logo</h3>
+        <img
+          src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png"
+          alt="Myntra Logo"
+        />
         <h3>Men</h3>
         <h3>Women</h3>
         <h3>Kids</h3>

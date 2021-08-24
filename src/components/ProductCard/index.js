@@ -1,28 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrandName,
   CardContainer,
   CardImage,
+  CardWishlist,
   Description,
   Price,
+  SizeInfo,
+  WishlistIcon,
 } from "./ProductCardElements";
 
-const ProductCard = ({ imgUrl, brandName, description, price }) => {
-  // props =  {imgUrl, brandName, description, price}
-  // img
-  // wishlist // (visible on hover)
-  // Product Name(2 lines, brand then product detail)
-  // Price
+const ProductCard = ({ imgUrl, brandName, description, size, price }) => {
+  const [hover, setHover] = useState(false);
+
+  const changeHover = () => {
+    setHover(!hover);
+  };
 
   return (
     <>
-      {/* <h2>Produuct Card</h2> */}
-
-      <CardContainer>
+      <CardContainer onMouseEnter={changeHover} onMouseLeave={changeHover}>
         {/* later add carousel and stuff to it */}
         <CardImage src={imgUrl} />
-        <BrandName>{brandName}</BrandName>
-        <Description>{description}</Description>
+
+        {hover ? (
+          <>
+            <CardWishlist>
+              <WishlistIcon />
+              <h4>WISHLIST</h4>
+            </CardWishlist>
+          </>
+        ) : (
+          <>
+            <BrandName>{brandName}</BrandName>
+          </>
+        )}
+        {hover ? (
+          <>
+            <SizeInfo>Sizes: {size}</SizeInfo>
+          </>
+        ) : (
+          <>
+            <Description>{description}</Description>
+          </>
+        )}
+
         <Price>{price}</Price>
         {/* also add ADD TO CART after frontend basic done */}
       </CardContainer>

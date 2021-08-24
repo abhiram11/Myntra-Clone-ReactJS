@@ -6,7 +6,7 @@ import bTwo from "../../images/bannerTwo.jpg";
 const Home = () => {
   return (
     <>
-      <h1>Banner</h1>
+      {/* <h1>Banner</h1> */}
       <BannerOne src={bOne}></BannerOne>
       <BannerTwo src={bTwo}></BannerTwo>
     </>

@@ -5,14 +5,24 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 export const NavbarContainer = styled.div`
   display: flex;
+  margin-bottom: 20px;
+  width: 100vw;
 `;
 
 export const NavbarLeft = styled.div`
   display: flex;
   align-items: center;
   h3 {
-    margin-right: 5px;
-    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 40px 20px;
+    &:hover {
+      border-bottom: 5px solid orange;
+    }
+  }
+
+  img {
+    height: 64px;
+    object-fit: contain;
   }
 `;
 
@@ -24,18 +34,29 @@ export const NavbarRight = styled.div`
 export const NavbarSearch = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 5px;
+  margin: 0 25px;
+  background: #f5f5f6;
+  padding: 16px;
+  border-radius: 8px;
 `;
 
-export const NavbarSearchIcon = styled(SearchIcon)``;
+export const NavbarSearchIcon = styled(SearchIcon)`
+  color: grey;
+`;
 
-export const NavbarSearchInput = styled.input``;
+export const NavbarSearchInput = styled.input`
+  font-size: 16px;
+  background: none;
+  outline: none;
+  border: none;
+`;
 
 export const NavbarPersonal = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 5px;
+  margin: 0 15px;
+  cursor: pointer;
 `;
 export const Profile = styled(PersonIcon)``;
 
