@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import {
   Bag,
   NavbarContainer,
@@ -14,7 +15,7 @@ import {
   Wishlist,
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <NavbarContainer>
       <NavbarLeft>
@@ -48,7 +49,9 @@ const Navbar = () => {
         {/* make it as a resuable component later, profile wishlist heart, bag */}
         <NavbarPersonal>
           <Profile />
-          Profile
+          {props.usernameInComponent
+            ? props.usernameInComponent.slice(0, 10)
+            : "Profile"}
         </NavbarPersonal>
         <NavbarPersonal>
           <NavbarRoute to="/wishlist">
@@ -67,4 +70,10 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export const mapStateToProps = (state) => {
+  return {
+    usernameInComponent: state.loginUserReducer.username,
+  };
+};
+
+export default connect(mapStateToProps)(Navbar);
