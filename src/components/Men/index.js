@@ -1,13 +1,15 @@
 import React from "react";
 import { MensData } from "../../Data";
 import ProductCard from "../ProductCard";
-import { ProductsGrid } from "./MenElements";
+import { MensHeading, ProductsGrid } from "./MenElements";
 
 const Men = () => {
   const menData = MensData;
   return (
     <>
-      <h2>Men</h2>
+      <MensHeading>
+        <h1>MEN</h1>
+      </MensHeading>
       <ProductsGrid>
         {menData.map((product) => {
           return (
@@ -20,13 +22,6 @@ const Men = () => {
             />
           );
         })}
-        {/* <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard /> */}
       </ProductsGrid>
     </>
   );

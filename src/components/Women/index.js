@@ -1,13 +1,15 @@
 import React from "react";
 import { WomensData } from "../../Data";
 import ProductCard from "../ProductCard";
-import { ProductsGrid } from "./WomenElements";
+import { ProductsGrid, WomensHeading } from "./WomenElements";
 
 const Women = () => {
   const womenData = WomensData;
   return (
     <>
-      <h2>Women</h2>
+      <WomensHeading>
+        <h1>WOMEN</h1>
+      </WomensHeading>
       <ProductsGrid>
         {womenData.map((product) => {
           return (
@@ -20,13 +22,6 @@ const Women = () => {
             />
           );
         })}
-        {/* <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard /> */}
       </ProductsGrid>
     </>
   );

@@ -4,18 +4,20 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 320px;
+  height: 380px;
   width: 256px;
   // border: 1px solid black;
-  margin: 10px;
-
+  margin: 10px 40px;
+  cursor: pointer;
   &:hover {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   }
 `;
 
 export const CardImage = styled.img`
+  height: 220px;
   object-fit: cover;
+  margin-bottom: auto;
 `;
 
 export const CardWishlist = styled.div`
@@ -33,10 +35,25 @@ export const CardWishlist = styled.div`
 `;
 export const WishlistIcon = styled(FavoriteBorderIcon)``;
 
-export const BrandName = styled.h3``;
+export const BrandName = styled.h3`
+  margin: 5px;
+`;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  margin: 5px;
+`;
 
-export const SizeInfo = styled.p``;
+export const SizeInfo = styled.p`
+  margin: 5px;
+`;
 
-export const Price = styled.h3``;
+export const Price = styled.h3`
+  margin: 5px;
+`;
+
+export const AddToCart = styled.button`
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  cursor: pointer;
+`;

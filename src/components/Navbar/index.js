@@ -5,6 +5,7 @@ import {
   NavbarLeft,
   NavbarPersonal,
   NavbarRight,
+  NavbarRoute,
   NavbarSearch,
   NavbarSearchIcon,
   NavbarSearchInput,
@@ -16,15 +17,27 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <NavbarLeft>
-        <img
-          src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png"
-          alt="Myntra Logo"
-        />
-        <h3>Men</h3>
-        <h3>Women</h3>
-        <h3>Kids</h3>
-        <h3>Home & Living</h3>
-        <h3>Beauty</h3>
+        <NavbarRoute to="/">
+          <img
+            src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png"
+            alt="Myntra Logo"
+          />
+        </NavbarRoute>
+        <NavbarRoute to="/men">
+          <h3>Men</h3>
+        </NavbarRoute>
+        <NavbarRoute to="/women">
+          <h3>Women</h3>
+        </NavbarRoute>
+        {/* <NavbarRoute>
+          <h3>Kids</h3>
+        </NavbarRoute>
+        <NavbarRoute>
+          <h3>Home & Living</h3>
+        </NavbarRoute> */}
+        <NavbarRoute to="/cart">
+          <h3>Cart</h3>
+        </NavbarRoute>
       </NavbarLeft>
       <NavbarRight>
         <NavbarSearch>
@@ -37,12 +50,16 @@ const Navbar = () => {
           Profile
         </NavbarPersonal>
         <NavbarPersonal>
-          <Wishlist />
-          Wishlist
+          <NavbarRoute to="/wishlist">
+            <Wishlist />
+            Wishlist
+          </NavbarRoute>
         </NavbarPersonal>
         <NavbarPersonal>
-          <Bag />
-          Bag
+          <NavbarRoute to="/cart">
+            <Bag />
+            Bag
+          </NavbarRoute>
         </NavbarPersonal>
       </NavbarRight>
     </NavbarContainer>

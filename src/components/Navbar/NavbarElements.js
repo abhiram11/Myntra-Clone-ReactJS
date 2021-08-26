@@ -3,10 +3,12 @@ import SearchIcon from "@material-ui/icons/Search";
 import PersonIcon from "@material-ui/icons/Person";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
+import { Link } from "react-router-dom";
+
 export const NavbarContainer = styled.div`
   display: flex;
   margin-bottom: 20px;
-  width: 100vw;
+  width: 99%;
 `;
 
 export const NavbarLeft = styled.div`
@@ -26,9 +28,15 @@ export const NavbarLeft = styled.div`
   }
 `;
 
+export const NavbarRoute = styled(Link)`
+  color: black;
+  text-decoration: none;
+`;
+
 export const NavbarRight = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const NavbarSearch = styled.div`
@@ -38,6 +46,7 @@ export const NavbarSearch = styled.div`
   background: #f5f5f6;
   padding: 16px;
   border-radius: 8px;
+  width: 100%;
 `;
 
 export const NavbarSearchIcon = styled(SearchIcon)`
@@ -49,6 +58,7 @@ export const NavbarSearchInput = styled.input`
   background: none;
   outline: none;
   border: none;
+  width: 100%;
 `;
 
 export const NavbarPersonal = styled.div`
