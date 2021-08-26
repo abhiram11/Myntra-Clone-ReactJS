@@ -9,6 +9,7 @@ import {
   NavbarSearch,
   NavbarSearchIcon,
   NavbarSearchInput,
+  NavH3,
   Profile,
   Wishlist,
 } from "./NavbarElements";
@@ -24,10 +25,10 @@ const Navbar = () => {
           />
         </NavbarRoute>
         <NavbarRoute to="/men">
-          <h3>Men</h3>
+          <NavH3 borderColor="orange">Men</NavH3>
         </NavbarRoute>
         <NavbarRoute to="/women">
-          <h3>Women</h3>
+          <NavH3 borderColor="pink">Women</NavH3>
         </NavbarRoute>
         {/* <NavbarRoute>
           <h3>Kids</h3>
@@ -36,7 +37,7 @@ const Navbar = () => {
           <h3>Home & Living</h3>
         </NavbarRoute> */}
         <NavbarRoute to="/cart">
-          <h3>Cart</h3>
+          <NavH3 borderColor="green">Cart</NavH3>
         </NavbarRoute>
       </NavbarLeft>
       <NavbarRight>

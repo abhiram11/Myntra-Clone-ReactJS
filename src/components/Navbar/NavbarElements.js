@@ -14,17 +14,18 @@ export const NavbarContainer = styled.div`
 export const NavbarLeft = styled.div`
   display: flex;
   align-items: center;
-  h3 {
-    text-transform: uppercase;
-    padding: 40px 20px;
-    &:hover {
-      border-bottom: 5px solid orange;
-    }
-  }
-
   img {
     height: 64px;
     object-fit: contain;
+  }
+`;
+
+export const NavH3 = styled.h3`
+  text-transform: uppercase;
+  padding: 40px 20px;
+  &:hover {
+    border-bottom: 5px solid;
+    border-color: ${({ borderColor }) => borderColor};
   }
 `;
 
