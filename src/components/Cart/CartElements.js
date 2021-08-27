@@ -4,6 +4,8 @@ import CloseIcon from "@material-ui/icons/Close";
 export const CartContainer = styled.div`
   display: flex;
   width: 100vw;
+  margin: 0 auto;
+  max-width: 1024px;
 `;
 
 export const CardContainerLeft = styled.div`
