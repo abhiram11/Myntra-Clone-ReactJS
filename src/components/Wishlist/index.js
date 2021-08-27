@@ -7,6 +7,7 @@ import {
   WishlistProductRight,
   ProductImage,
   WishlistContainer,
+  EmptyWishlist,
 } from "./WishlistElements";
 import { addToCart } from "../../redux";
 
@@ -56,7 +57,9 @@ const Wishlist = (props) => {
         </>
       ) : (
         <>
-          <h1>Your Wishlist is Empty! Make a Wish ;)</h1>
+          <EmptyWishlist>
+            <h1>Your Wishlist is Empty! Make a Wish ;)</h1>
+          </EmptyWishlist>{" "}
         </>
       )}
     </WishlistContainer>

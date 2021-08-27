@@ -55,3 +55,12 @@ export const WishlistProductCross = styled(CloseIcon)`
   cursor: pointer;
   font-size: 28px !important;
 `;
+
+export const EmptyWishlist = styled.div`
+  display: flex;
+  width: 100%;
+  h1 {
+    justify-content: center;
+    margin: 10px auto;
+  }
+`;

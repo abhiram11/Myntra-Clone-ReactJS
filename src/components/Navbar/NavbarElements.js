@@ -23,6 +23,7 @@ export const NavbarLeft = styled.div`
 export const NavH3 = styled.h3`
   text-transform: uppercase;
   padding: 40px 20px;
+  transition: all 0.1s ease-in-out;
   &:hover {
     border-bottom: 5px solid;
     border-color: ${({ borderColor }) => borderColor};
